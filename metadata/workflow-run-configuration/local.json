@@ -1,0 +1,12 @@
+{
+  "engineRunConfiguration": {
+    "Local": {
+      "safe_mode": false,
+      "transactional": false
+    }
+  },
+  "defaultSelection": false,
+  "name": "local",
+  "description": "",
+  "executionInfoLocationName": "execução local"
+}

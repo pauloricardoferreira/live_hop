@@ -17,14 +17,14 @@
       <description/>
       <type>SPECIAL</type>
       <attributes/>
+      <DayOfMonth>1</DayOfMonth>
+      <hour>12</hour>
+      <intervalMinutes>60</intervalMinutes>
+      <intervalSeconds>0</intervalSeconds>
+      <minutes>0</minutes>
       <repeat>N</repeat>
       <schedulerType>0</schedulerType>
-      <intervalSeconds>0</intervalSeconds>
-      <intervalMinutes>60</intervalMinutes>
-      <hour>12</hour>
-      <minutes>0</minutes>
       <weekDay>1</weekDay>
-      <DayOfMonth>1</DayOfMonth>
       <parallel>N</parallel>
       <xloc>80</xloc>
       <yloc>96</yloc>
@@ -91,24 +91,24 @@
   </hops>
   <notepads>
     <notepad>
-      <note>Workflow para gerar Dags utilizadas no Apache Airflow</note>
-      <xloc>128</xloc>
-      <yloc>32</yloc>
-      <width>299</width>
-      <heigth>26</heigth>
+      <backgroundcolorblue>251</backgroundcolorblue>
+      <backgroundcolorgreen>232</backgroundcolorgreen>
+      <backgroundcolorred>201</backgroundcolorred>
+      <bordercolorblue>90</bordercolorblue>
+      <bordercolorgreen>58</bordercolorgreen>
+      <bordercolorred>14</bordercolorred>
+      <fontbold>N</fontbold>
+      <fontcolorblue>90</fontcolorblue>
+      <fontcolorgreen>58</fontcolorgreen>
+      <fontcolorred>14</fontcolorred>
+      <fontitalic>N</fontitalic>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
-      <fontbold>N</fontbold>
-      <fontitalic>N</fontitalic>
-      <fontcolorred>14</fontcolorred>
-      <fontcolorgreen>58</fontcolorgreen>
-      <fontcolorblue>90</fontcolorblue>
-      <backgroundcolorred>201</backgroundcolorred>
-      <backgroundcolorgreen>232</backgroundcolorgreen>
-      <backgroundcolorblue>251</backgroundcolorblue>
-      <bordercolorred>14</bordercolorred>
-      <bordercolorgreen>58</bordercolorgreen>
-      <bordercolorblue>90</bordercolorblue>
+      <height>26</height>
+      <xloc>128</xloc>
+      <yloc>32</yloc>
+      <note>Workflow para gerar Dags utilizadas no Apache Airflow</note>
+      <width>299</width>
     </notepad>
   </notepads>
   <attributes>

@@ -252,7 +252,7 @@
     <length>Characters</length>
     <add_to_result_filenames>Y</add_to_result_filenames>
     <file>
-      <name>${PROJECT_HOME}/precos-gasolina-etanol-12.csv</name>
+      <name>${PROJECT_HOME}/INTEGRACAO/precos-gasolina-etanol-12.csv</name>
       <filemask/>
       <exclude_filemask/>
       <file_required>N</file_required>

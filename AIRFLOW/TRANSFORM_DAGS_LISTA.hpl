@@ -274,7 +274,7 @@ var DAG =
 + '\n' + "    dag=dag,"
 + '\n' + "    task_id='" + TASK_ID + "',"
 + '\n' + "    workflow='" + JOB_NAME + ".hwf',"
-+ '\n' + "    project_name='hop_repo',"
++ '\n' + "    project_name='LIVE',"
 + '\n' + "    log_level= '" + LEVEL + "'"
 + '\n' + ")"</jsScript_script>
       </jsScript>

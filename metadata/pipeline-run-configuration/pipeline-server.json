@@ -6,12 +6,14 @@
       "resources_source_folder": "",
       "run_config": "local",
       "server_poll_interval": "",
-      "hop_server": "local",
+      "hop_server": "hop-server",
       "server_poll_delay": ""
     }
   },
   "defaultSelection": false,
-  "name": "workflow-local",
+  "configurationVariables": [],
+  "name": "pipeline-server",
   "description": "",
+  "dataProfile": "",
   "executionInfoLocationName": ""
 }

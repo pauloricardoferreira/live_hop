@@ -255,7 +255,7 @@ var DAG =
 + '\n' + "    'owner': 'Agroterenas',"
 + '\n' + "    'depends_on_past': False,"
 + '\n' + "    'start_date': datetime.today() - timedelta(days=1),  #datetime(2021, 3, 13, 0, tzinfo=local_tz), datetime(yyyy,mm,dd,hh,mn,sc, tzinfo=local_tz),"
-+ '\n' + "    'email': ['paulo.ricardo@agroterenas.com.br'],"
++ '\n' + "    'email': ['admin@gmail.com'],"
 + '\n' + "    'email_on_failure': False,"
 + '\n' + "    'email_on_retry': False,"
 + '\n' + "    'retries': 0,"

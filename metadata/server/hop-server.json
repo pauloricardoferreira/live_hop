@@ -2,7 +2,7 @@
   "webAppName": "",
   "sslMode": false,
   "proxyPort": "",
-  "hostname": "192.168.56.121",
+  "hostname": "0.0.0.0",
   "nonProxyHosts": "",
   "overrideExistingProperties": false,
   "password": "Encrypted 2be98afc86aa7f2e4cb1aa265cd86aac8",

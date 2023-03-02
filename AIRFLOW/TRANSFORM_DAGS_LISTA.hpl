@@ -57,7 +57,7 @@
       <field>
         <length>-1</length>
         <name>CAMINHO</name>
-        <nullif>/opt/LIVE/live_airflow_dags</nullif>
+        <nullif>/opt/projetos/live_airflow_dags</nullif>
         <precision>-1</precision>
         <set_empty_string>N</set_empty_string>
         <type>String</type>
@@ -252,9 +252,10 @@ var DAG =
 //+ '\n' + "local_tz.convert(logical_date)"
 + '\n' + ""
 + '\n' + "default_args = {"
-+ '\n' + "    'owner': 'Agroterenas',"
++ '\n' + "    'owner': 'Live',"
 + '\n' + "    'depends_on_past': False,"
-+ '\n' + "    'start_date': datetime.today() - timedelta(days=1),  #datetime(2021, 3, 13, 0, tzinfo=local_tz), datetime(yyyy,mm,dd,hh,mn,sc, tzinfo=local_tz),"
++ '\n' + "    #'start_date': datetime.today() - timedelta(days=1),  #datetime(2021, 3, 13, 0, tzinfo=local_tz), datetime(yyyy,mm,dd,hh,mn,sc, tzinfo=local_tz),"
++ '\n' + "    'start_date': datetime(2021, 3, 13, 0, tzinfo=local_tz), #datetime(yyyy,mm,dd,hh,mn,sc, tzinfo=local_tz),"
 + '\n' + "    'email': ['admin@gmail.com'],"
 + '\n' + "    'email_on_failure': False,"
 + '\n' + "    'email_on_retry': False,"
@@ -274,7 +275,8 @@ var DAG =
 + '\n' + "    dag=dag,"
 + '\n' + "    task_id='" + TASK_ID + "',"
 + '\n' + "    workflow='" + JOB_NAME + ".hwf',"
-+ '\n' + "    project_name='LIVE',"
++ '\n' + "    project_name='live_hop',"
++ '\n' + "    environment='hop-repo-prd',"
 + '\n' + "    log_level= '" + LEVEL + "'"
 + '\n' + ")"</jsScript_script>
       </jsScript>

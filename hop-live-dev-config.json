@@ -19,5 +19,9 @@
     "name" : "port",
     "value" : "5434",
     "description" : ""
+  }, {
+    "name" : "PROJECT_HOME",
+    "value" : "/opt/projetos/live_hop",
+    "description" : ""
   } ]
 }

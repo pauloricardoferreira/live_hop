@@ -276,7 +276,7 @@ var DAG =
 + '\n' + "    task_id='" + TASK_ID + "',"
 + '\n' + "    workflow='" + JOB_NAME + ".hwf',"
 + '\n' + "    project_name='live_hop',"
-+ '\n' + "    environment='hop-repo-prd',"
++ '\n' + "    environment='hop-live-prd',"
 + '\n' + "    log_level= '" + LEVEL + "'"
 + '\n' + ")"</jsScript_script>
       </jsScript>

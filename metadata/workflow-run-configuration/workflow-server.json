@@ -1,7 +1,7 @@
 {
   "engineRunConfiguration": {
     "Remote": {
-      "export_resources": false,
+      "export_resources": true,
       "resources_target_folder": "",
       "resources_source_folder": "",
       "run_config": "local",

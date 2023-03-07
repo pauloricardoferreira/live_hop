@@ -1,6 +1,4 @@
-## Conteúdo do repositório
+## Bem-vindo
 ___
 
-Neste repositório você vai encontrar os artefatos e configurações do Apache Hop para o projeto apresentado em Live.
-
-
+Neste repositório você vai encontrar os artefatos de um projeto Apache Hop.

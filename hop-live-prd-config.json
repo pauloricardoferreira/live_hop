@@ -13,7 +13,7 @@
     "description" : ""
   }, {
     "name" : "host",
-    "value" : "34.125.34.90",
+    "value" : "localhost",
     "description" : ""
   }, {
     "name" : "port",

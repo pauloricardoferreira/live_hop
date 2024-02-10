@@ -22,23 +22,33 @@
   </notepads>
   <order>
     <hop>
-      <from>Modified JavaScript value</from>
-      <to>Text file output</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Microsoft Excel input</from>
-      <to>CAMINHO</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>CAMINHO</from>
       <to>Concat fields</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
+      <from>base</from>
+      <to>Merge join</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>dag</from>
+      <to>Merge join</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Merge join</from>
+      <to>Replace in string</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Replace in string</from>
+      <to>CAMINHO</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
       <from>Concat fields</from>
-      <to>Modified JavaScript value</to>
+      <to>Text file output</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -65,8 +75,8 @@
     </fields>
     <attributes/>
     <GUI>
-      <xloc>304</xloc>
-      <yloc>80</yloc>
+      <xloc>720</xloc>
+      <yloc>192</yloc>
     </GUI>
   </transform>
   <transform>
@@ -104,12 +114,236 @@
     <separator>/</separator>
     <attributes/>
     <GUI>
-      <xloc>432</xloc>
-      <yloc>80</yloc>
+      <xloc>912</xloc>
+      <yloc>192</yloc>
     </GUI>
   </transform>
   <transform>
-    <name>Microsoft Excel input</name>
+    <name>Merge join</name>
+    <type>MergeJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <join_type>FULL OUTER</join_type>
+    <keys_1>
+</keys_1>
+    <keys_2>
+</keys_2>
+    <transform1>base</transform1>
+    <transform2>dag</transform2>
+    <attributes/>
+    <GUI>
+      <xloc>304</xloc>
+      <yloc>192</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Replace in string</name>
+    <type>ReplaceString</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <case_sensitive>N</case_sensitive>
+        <in_stream_name>dag</in_stream_name>
+        <is_unicode>N</is_unicode>
+        <replace_field_by_string>OWNER</replace_field_by_string>
+        <replace_string>@OWNER</replace_string>
+        <set_empty_string>N</set_empty_string>
+        <use_regex>Y</use_regex>
+        <whole_word>N</whole_word>
+      </field>
+      <field>
+        <case_sensitive>N</case_sensitive>
+        <in_stream_name>dag</in_stream_name>
+        <is_unicode>N</is_unicode>
+        <replace_field_by_string>EMAIL</replace_field_by_string>
+        <replace_string>@EMAIL</replace_string>
+        <set_empty_string>N</set_empty_string>
+        <use_regex>Y</use_regex>
+        <whole_word>N</whole_word>
+      </field>
+      <field>
+        <case_sensitive>N</case_sensitive>
+        <in_stream_name>dag</in_stream_name>
+        <is_unicode>N</is_unicode>
+        <replace_field_by_string>DAG_ID</replace_field_by_string>
+        <replace_string>@DAG_ID</replace_string>
+        <set_empty_string>N</set_empty_string>
+        <use_regex>Y</use_regex>
+        <whole_word>N</whole_word>
+      </field>
+      <field>
+        <case_sensitive>N</case_sensitive>
+        <in_stream_name>dag</in_stream_name>
+        <is_unicode>N</is_unicode>
+        <replace_field_by_string>SCHEDULER_INTERVAL</replace_field_by_string>
+        <replace_string>@SCHEDULER_INTERVAL</replace_string>
+        <set_empty_string>N</set_empty_string>
+        <use_regex>Y</use_regex>
+        <whole_word>N</whole_word>
+      </field>
+      <field>
+        <case_sensitive>N</case_sensitive>
+        <in_stream_name>dag</in_stream_name>
+        <is_unicode>N</is_unicode>
+        <replace_field_by_string>TAGS</replace_field_by_string>
+        <replace_string>@TAGS</replace_string>
+        <set_empty_string>N</set_empty_string>
+        <use_regex>Y</use_regex>
+        <whole_word>N</whole_word>
+      </field>
+      <field>
+        <case_sensitive>N</case_sensitive>
+        <in_stream_name>dag</in_stream_name>
+        <is_unicode>N</is_unicode>
+        <replace_field_by_string>TASK_ID</replace_field_by_string>
+        <replace_string>@TASK_ID</replace_string>
+        <set_empty_string>N</set_empty_string>
+        <use_regex>Y</use_regex>
+        <whole_word>N</whole_word>
+      </field>
+      <field>
+        <case_sensitive>N</case_sensitive>
+        <in_stream_name>dag</in_stream_name>
+        <is_unicode>N</is_unicode>
+        <replace_field_by_string>JOB_NAME</replace_field_by_string>
+        <replace_string>@JOB_NAME</replace_string>
+        <set_empty_string>N</set_empty_string>
+        <use_regex>Y</use_regex>
+        <whole_word>N</whole_word>
+      </field>
+      <field>
+        <case_sensitive>N</case_sensitive>
+        <in_stream_name>dag</in_stream_name>
+        <is_unicode>N</is_unicode>
+        <replace_field_by_string>PROJECT_NAME</replace_field_by_string>
+        <replace_string>@PROJECT_NAME</replace_string>
+        <set_empty_string>N</set_empty_string>
+        <use_regex>Y</use_regex>
+        <whole_word>N</whole_word>
+      </field>
+      <field>
+        <case_sensitive>N</case_sensitive>
+        <in_stream_name>dag</in_stream_name>
+        <is_unicode>N</is_unicode>
+        <replace_field_by_string>ENVIRONMENT_NAME</replace_field_by_string>
+        <replace_string>@ENVIRONMENT_NAME</replace_string>
+        <set_empty_string>N</set_empty_string>
+        <use_regex>Y</use_regex>
+        <whole_word>N</whole_word>
+      </field>
+      <field>
+        <case_sensitive>N</case_sensitive>
+        <in_stream_name>dag</in_stream_name>
+        <is_unicode>N</is_unicode>
+        <replace_field_by_string>ENVIRONMENT_PATH</replace_field_by_string>
+        <replace_string>@ENVIRONMENT_PATH</replace_string>
+        <set_empty_string>N</set_empty_string>
+        <use_regex>Y</use_regex>
+        <whole_word>N</whole_word>
+      </field>
+      <field>
+        <case_sensitive>N</case_sensitive>
+        <in_stream_name>dag</in_stream_name>
+        <is_unicode>N</is_unicode>
+        <replace_field_by_string>EXTENSAO</replace_field_by_string>
+        <replace_string>@EXTENSAO</replace_string>
+        <set_empty_string>N</set_empty_string>
+        <use_regex>Y</use_regex>
+        <whole_word>N</whole_word>
+      </field>
+      <field>
+        <case_sensitive>N</case_sensitive>
+        <in_stream_name>dag</in_stream_name>
+        <is_unicode>N</is_unicode>
+        <replace_field_by_string>PROJECT_PATH</replace_field_by_string>
+        <replace_string>@PROJECT_PATH</replace_string>
+        <set_empty_string>N</set_empty_string>
+        <use_regex>Y</use_regex>
+        <whole_word>N</whole_word>
+      </field>
+    </fields>
+    <attributes/>
+    <GUI>
+      <xloc>512</xloc>
+      <yloc>192</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Text file output</name>
+    <type>TextFileOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <separator/>
+    <enclosure/>
+    <enclosure_forced>N</enclosure_forced>
+    <enclosure_fix_disabled>N</enclosure_fix_disabled>
+    <header>N</header>
+    <footer>N</footer>
+    <format>UNIX</format>
+    <compression>None</compression>
+    <encoding>windows-1252</encoding>
+    <endedLine/>
+    <fileNameInField>Y</fileNameInField>
+    <fileNameField>CAMINHO_DESTINO</fileNameField>
+    <create_parent_folder>N</create_parent_folder>
+    <file>
+      <name>${Internal.Entry.Current.Folder}opt/airflow_dags/${DAG_NAME}</name>
+      <servlet_output>N</servlet_output>
+      <do_not_open_new_file_init>Y</do_not_open_new_file_init>
+      <extention>py</extention>
+      <append>N</append>
+      <split>N</split>
+      <haspartno>N</haspartno>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <SpecifyFormat>N</SpecifyFormat>
+      <date_time_format/>
+      <add_to_result_filenames>N</add_to_result_filenames>
+      <pad>N</pad>
+      <fast_dump>N</fast_dump>
+      <splitevery>0</splitevery>
+    </file>
+    <fields>
+      <field>
+        <name>dag</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+    </fields>
+    <attributes/>
+    <GUI>
+      <xloc>1072</xloc>
+      <yloc>192</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>base</name>
     <type>ExcelInput</type>
     <description/>
     <distribute>N</distribute>
@@ -128,7 +362,7 @@
     <fields>
       <field>
         <length>-1</length>
-        <name>WORKFLOW</name>
+        <name>JOB</name>
         <precision>-1</precision>
         <repeat>N</repeat>
         <trim_type>none</trim_type>
@@ -184,6 +418,38 @@
       </field>
       <field>
         <length>-1</length>
+        <name>OBJETIVO</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>none</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>TEMA</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>none</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>NIVEL1</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>none</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>NIVEL2</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>none</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <length>-1</length>
         <name>TAGS</name>
         <precision>-1</precision>
         <repeat>N</repeat>
@@ -193,6 +459,86 @@
       <field>
         <length>-1</length>
         <name>LEVEL</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>none</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>OBS</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>none</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>OWNER</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>none</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>EMAIL</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>none</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>PROJECT_NAME</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>none</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>ENVIRONMENT_NAME</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>none</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>EXTENSAO</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>none</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>TAG_PRINCIPAL</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>none</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>DAG_TIME</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>none</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>PROJECT_PATH</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>none</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>ENVIRONMENT_PATH</name>
         <precision>-1</precision>
         <repeat>N</repeat>
         <trim_type>none</trim_type>
@@ -221,85 +567,12 @@
     <attributes/>
     <GUI>
       <xloc>144</xloc>
-      <yloc>80</yloc>
+      <yloc>192</yloc>
     </GUI>
   </transform>
   <transform>
-    <name>Modified JavaScript value</name>
-    <type>ScriptValueMod</type>
-    <description/>
-    <distribute>N</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <optimizationLevel>9</optimizationLevel>
-    <jsScripts>
-      <jsScript>
-        <jsScript_type>0</jsScript_type>
-        <jsScript_name>Script 1</jsScript_name>
-        <jsScript_script>//Script here
-
-var DAG =
-	"import pendulum"
-+ '\n' + "from datetime import datetime, timedelta"
-+ '\n' + "from airflow import DAG"
-+ '\n' + "from airflow_hop.operators import HopWorkflowOperator"
-+ '\n' + ""
-+ '\n' + "local_tz=pendulum.timezone('America/Sao_Paulo')"
-//+ '\n' + "local_tz.convert(logical_date)"
-+ '\n' + ""
-+ '\n' + "default_args = {"
-+ '\n' + "    'owner': 'Live',"
-+ '\n' + "    'depends_on_past': False,"
-+ '\n' + "    #'start_date': datetime.today() - timedelta(days=1),  #datetime(2021, 3, 13, 0, tzinfo=local_tz), datetime(yyyy,mm,dd,hh,mn,sc, tzinfo=local_tz),"
-+ '\n' + "    'start_date': datetime(2021, 3, 13, 0, tzinfo=local_tz), #datetime(yyyy,mm,dd,hh,mn,sc, tzinfo=local_tz),"
-+ '\n' + "    'email': ['admin@gmail.com'],"
-+ '\n' + "    'email_on_failure': False,"
-+ '\n' + "    'email_on_retry': False,"
-+ '\n' + "    'retries': 0,"
-+ '\n' + "    'retry_delay': timedelta(seconds=30)"
-+ '\n' + "}"
-+ '\n' + ""
-+ '\n' + "dag = DAG("
-+ '\n' + "    dag_id='" + DAG_ID + "',"
-+ '\n' + "    default_args=default_args,"
-+ '\n' + "    schedule_interval='" + SCHEDULER_INTERVAL + "',"
-+ '\n' + "    catchup=False,"
-+ '\n' + "    tags=[" + TAGS + "]"
-+ '\n' + ")"
-+ '\n' + ""
-+ '\n' + "job = HopWorkflowOperator("
-+ '\n' + "    dag=dag,"
-+ '\n' + "    task_id='" + TASK_ID + "',"
-+ '\n' + "    workflow='" + JOB_NAME + ".hwf',"
-+ '\n' + "    project_name='live_hop',"
-+ '\n' + "    environment='hop-live-prd',"
-+ '\n' + "    log_level= '" + LEVEL + "'"
-+ '\n' + ")"</jsScript_script>
-      </jsScript>
-    </jsScripts>
-    <fields>
-      <field>
-        <name>DAG</name>
-        <rename>DAG</rename>
-        <type>String</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <replace>N</replace>
-      </field>
-    </fields>
-    <attributes/>
-    <GUI>
-      <xloc>608</xloc>
-      <yloc>80</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>Text file output</name>
-    <type>TextFileOutput</type>
+    <name>dag</name>
+    <type>LoadFileInput</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -308,54 +581,50 @@ var DAG =
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <separator/>
-    <enclosure/>
-    <enclosure_forced>N</enclosure_forced>
-    <enclosure_fix_disabled>N</enclosure_fix_disabled>
-    <header>N</header>
-    <footer>N</footer>
-    <format>UNIX</format>
-    <compression>None</compression>
-    <encoding>windows-1252</encoding>
-    <endedLine/>
-    <fileNameInField>Y</fileNameInField>
-    <fileNameField>CAMINHO_DESTINO</fileNameField>
-    <create_parent_folder>N</create_parent_folder>
+    <include>N</include>
+    <include_field/>
+    <rownum>N</rownum>
+    <addresultfile>Y</addresultfile>
+    <IsIgnoreEmptyFile>N</IsIgnoreEmptyFile>
+    <IsIgnoreMissingPath>N</IsIgnoreMissingPath>
+    <rownum_field/>
+    <encoding>UTF-8</encoding>
     <file>
-      <name>${Internal.Entry.Current.Folder}opt/airflow_dags/${DAG_NAME}</name>
-      <servlet_output>N</servlet_output>
-      <do_not_open_new_file_init>Y</do_not_open_new_file_init>
-      <extention>py</extention>
-      <append>N</append>
-      <split>N</split>
-      <haspartno>N</haspartno>
-      <add_date>N</add_date>
-      <add_time>N</add_time>
-      <SpecifyFormat>N</SpecifyFormat>
-      <date_time_format/>
-      <add_to_result_filenames>N</add_to_result_filenames>
-      <pad>N</pad>
-      <fast_dump>N</fast_dump>
-      <splitevery>0</splitevery>
+      <name>${PROJECT_HOME}/AIRFLOW/modelo_dag.py</name>
+      <filemask/>
+      <exclude_filemask/>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
     </file>
     <fields>
       <field>
-        <name>DAG</name>
+        <name>dag</name>
+        <element_type>content</element_type>
         <type>String</type>
         <format/>
         <currency/>
         <decimal/>
         <group/>
-        <nullif/>
-        <trim_type>none</trim_type>
-        <length>-1</length>
+        <length>10000</length>
         <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
       </field>
     </fields>
+    <limit>0</limit>
+    <IsInFields>N</IsInFields>
+    <DynamicFilenameField/>
+    <shortFileFieldName/>
+    <pathFieldName/>
+    <hiddenFieldName/>
+    <lastModificationTimeFieldName/>
+    <uriNameFieldName/>
+    <rootUriNameFieldName/>
+    <extensionFieldName/>
     <attributes/>
     <GUI>
-      <xloc>608</xloc>
-      <yloc>208</yloc>
+      <xloc>304</xloc>
+      <yloc>80</yloc>
     </GUI>
   </transform>
   <transform_error_handling>

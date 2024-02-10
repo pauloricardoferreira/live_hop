@@ -1,0 +1,23 @@
+{
+  "variables" : [ {
+    "name" : "db",
+    "value" : "live",
+    "description" : ""
+  }, {
+    "name" : "user",
+    "value" : "prd",
+    "description" : ""
+  }, {
+    "name" : "password",
+    "value" : "prd",
+    "description" : ""
+  }, {
+    "name" : "host",
+    "value" : "34.125.34.90",
+    "description" : ""
+  }, {
+    "name" : "port",
+    "value" : "5433",
+    "description" : ""
+  } ]
+}

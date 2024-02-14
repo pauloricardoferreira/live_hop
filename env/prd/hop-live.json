@@ -1,7 +1,7 @@
 {
   "variables" : [ {
     "name" : "db",
-    "value" : "live",
+    "value" : "prd",
     "description" : ""
   }, {
     "name" : "user",
@@ -13,11 +13,11 @@
     "description" : ""
   }, {
     "name" : "host",
-    "value" : "34.125.34.90",
+    "value" : "host.docker.internal",
     "description" : ""
   }, {
     "name" : "port",
-    "value" : "5433",
+    "value" : "5432",
     "description" : ""
   } ]
 }

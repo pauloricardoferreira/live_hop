@@ -1,0 +1,197 @@
+{
+  "variableValues": [],
+  "database_replacements": [],
+  "autoOpening": true,
+  "basePath": "",
+  "golden_data_sets": [
+    {
+      "field_mappings": [
+        {
+          "transform_field": "regiao",
+          "data_set_field": "regiao"
+        },
+        {
+          "transform_field": "estado",
+          "data_set_field": "estado"
+        },
+        {
+          "transform_field": "municipio",
+          "data_set_field": "municipio"
+        },
+        {
+          "transform_field": "revenda",
+          "data_set_field": "revenda"
+        },
+        {
+          "transform_field": "cnpj",
+          "data_set_field": "cnpj"
+        },
+        {
+          "transform_field": "endereco",
+          "data_set_field": "endereco"
+        },
+        {
+          "transform_field": "rua",
+          "data_set_field": "rua"
+        },
+        {
+          "transform_field": "complemento",
+          "data_set_field": "complemento"
+        },
+        {
+          "transform_field": "bairro",
+          "data_set_field": "bairro"
+        },
+        {
+          "transform_field": "cep",
+          "data_set_field": "cep"
+        },
+        {
+          "transform_field": "produto",
+          "data_set_field": "produto"
+        },
+        {
+          "transform_field": "data",
+          "data_set_field": "data"
+        },
+        {
+          "transform_field": "valor_venda",
+          "data_set_field": "valor_venda"
+        },
+        {
+          "transform_field": "valor_compra",
+          "data_set_field": "valor_compra"
+        },
+        {
+          "transform_field": "unidade_medida",
+          "data_set_field": "unidade_medida"
+        },
+        {
+          "transform_field": "bandeira",
+          "data_set_field": "bandeira"
+        }
+      ],
+      "field_order": [
+        "regiao",
+        "estado",
+        "municipio",
+        "revenda",
+        "cnpj",
+        "endereco",
+        "rua",
+        "complemento",
+        "bairro",
+        "cep",
+        "produto",
+        "data",
+        "valor_venda",
+        "valor_compra",
+        "unidade_medida",
+        "bandeira"
+      ],
+      "data_set_name": "precos-gasolina-etanol-12-output",
+      "transform_name": "Select values 2"
+    }
+  ],
+  "input_data_sets": [
+    {
+      "field_mappings": [
+        {
+          "transform_field": "﻿Regiao___Sigla",
+          "data_set_field": "﻿Regiao___Sigla"
+        },
+        {
+          "transform_field": "Estado___Sigla",
+          "data_set_field": "Estado___Sigla"
+        },
+        {
+          "transform_field": "Municipio",
+          "data_set_field": "Municipio"
+        },
+        {
+          "transform_field": "Revenda",
+          "data_set_field": "Revenda"
+        },
+        {
+          "transform_field": "CNPJ_da_Revenda",
+          "data_set_field": "CNPJ_da_Revenda"
+        },
+        {
+          "transform_field": "Nome_da_Rua",
+          "data_set_field": "Nome_da_Rua"
+        },
+        {
+          "transform_field": "Numero_Rua",
+          "data_set_field": "Numero_Rua"
+        },
+        {
+          "transform_field": "Complemento",
+          "data_set_field": "Complemento"
+        },
+        {
+          "transform_field": "Bairro",
+          "data_set_field": "Bairro"
+        },
+        {
+          "transform_field": "Cep",
+          "data_set_field": "Cep"
+        },
+        {
+          "transform_field": "Produto",
+          "data_set_field": "Produto"
+        },
+        {
+          "transform_field": "Data_da_Coleta",
+          "data_set_field": "Data_da_Coleta"
+        },
+        {
+          "transform_field": "Valor_de_Venda",
+          "data_set_field": "Valor_de_Venda"
+        },
+        {
+          "transform_field": "Valor_de_Compra",
+          "data_set_field": "Valor_de_Compra"
+        },
+        {
+          "transform_field": "Unidade_de_Medida",
+          "data_set_field": "Unidade_de_Medida"
+        },
+        {
+          "transform_field": "Bandeira",
+          "data_set_field": "Bandeira"
+        }
+      ],
+      "field_order": [
+        "﻿Regiao___Sigla",
+        "Estado___Sigla",
+        "Municipio",
+        "Revenda",
+        "CNPJ_da_Revenda",
+        "Nome_da_Rua",
+        "Numero_Rua",
+        "Complemento",
+        "Bairro",
+        "Cep",
+        "Produto",
+        "Data_da_Coleta",
+        "Valor_de_Venda",
+        "Valor_de_Compra",
+        "Unidade_de_Medida",
+        "Bandeira"
+      ],
+      "data_set_name": "precos-gasolina-etanol-12-input",
+      "transform_name": "Text file input"
+    }
+  ],
+  "name": "pipeline UNIT",
+  "description": "",
+  "persist_filename": "",
+  "trans_test_tweaks": [
+    {
+      "transformName": "Table output",
+      "tweak": "REMOVE_TRANSFORM"
+    }
+  ],
+  "pipeline_filename": "./INTEGRACAO/pipeline.hpl",
+  "test_type": "UNIT_TEST"
+}

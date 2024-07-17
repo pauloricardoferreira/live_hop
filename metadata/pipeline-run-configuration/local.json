@@ -13,10 +13,10 @@
       "transactional": false
     }
   },
-  "defaultSelection": false,
+  "defaultSelection": true,
   "configurationVariables": [],
   "name": "local",
   "description": "local",
-  "dataProfile": "",
-  "executionInfoLocationName": ""
+  "dataProfile": "first-last",
+  "executionInfoLocationName": "audit-local"
 }

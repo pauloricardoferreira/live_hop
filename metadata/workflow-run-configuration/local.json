@@ -5,8 +5,8 @@
       "transactional": false
     }
   },
-  "defaultSelection": false,
+  "defaultSelection": true,
   "name": "local",
   "description": "",
-  "executionInfoLocationName": "execução local"
+  "executionInfoLocationName": "audit-local"
 }

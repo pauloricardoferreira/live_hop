@@ -27,10 +27,57 @@
     </hop>
     <hop>
       <from>Select values</from>
+      <to>Filter rows</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Filter rows</from>
+      <to>Select values 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Select values 2</from>
       <to>Table output</to>
       <enabled>Y</enabled>
     </hop>
   </order>
+  <transform>
+    <name>Filter rows</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <compare>
+      <condition>
+        <conditions>
+</conditions>
+        <function>=</function>
+        <leftvalue>estado</leftvalue>
+        <negated>N</negated>
+        <operator>-</operator>
+        <value>
+          <isnull>N</isnull>
+          <length>-1</length>
+          <mask/>
+          <name>constant</name>
+          <precision>-1</precision>
+          <text>SP</text>
+          <type>String</type>
+        </value>
+      </condition>
+    </compare>
+    <send_true_to>Select values 2</send_true_to>
+    <attributes/>
+    <GUI>
+      <xloc>672</xloc>
+      <yloc>144</yloc>
+    </GUI>
+  </transform>
   <transform>
     <name>Select values</name>
     <type>SelectValues</type>
@@ -112,6 +159,74 @@
     <attributes/>
     <GUI>
       <xloc>512</xloc>
+      <yloc>144</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Select values 2</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>regiao</name>
+      </field>
+      <field>
+        <name>estado</name>
+      </field>
+      <field>
+        <name>municipio</name>
+      </field>
+      <field>
+        <name>revenda</name>
+      </field>
+      <field>
+        <name>cnpj</name>
+      </field>
+      <field>
+        <name>endereco</name>
+      </field>
+      <field>
+        <name>rua</name>
+      </field>
+      <field>
+        <name>complemento</name>
+      </field>
+      <field>
+        <name>bairro</name>
+      </field>
+      <field>
+        <name>cep</name>
+      </field>
+      <field>
+        <name>produto</name>
+      </field>
+      <field>
+        <name>data</name>
+      </field>
+      <field>
+        <name>valor_venda</name>
+      </field>
+      <field>
+        <name>valor_compra</name>
+      </field>
+      <field>
+        <name>unidade_medida</name>
+      </field>
+      <field>
+        <name>bandeira</name>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <GUI>
+      <xloc>832</xloc>
       <yloc>144</yloc>
     </GUI>
   </transform>
@@ -209,8 +324,8 @@
     <use_batch>Y</use_batch>
     <attributes/>
     <GUI>
-      <xloc>672</xloc>
-      <yloc>144</yloc>
+      <xloc>832</xloc>
+      <yloc>256</yloc>
     </GUI>
   </transform>
   <transform>
@@ -513,6 +628,7 @@
     <error_count_field/>
     <error_fields_field/>
     <error_text_field/>
+    <schema_definition/>
     <bad_line_files_destination_directory/>
     <bad_line_files_extension>warning</bad_line_files_extension>
     <error_line_files_destination_directory/>
